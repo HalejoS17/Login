@@ -1,0 +1,13 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+
+<h2>Detalles del Usuario</h2>
+
+<p>
+    <strong>Nombre de Usuario:</strong> @Model.UserName
+</p>
+<p>
+    <strong>Email:</strong> @Model.Email
+</p>
+
+<a href="@Url.Action("Edit", new { id = Model.Id })">Editar</a> |
+<a href="@Url.Action("Index")">Volver a la lista</a>

@@ -1,0 +1,11 @@
+﻿@model Microsoft.AspNetCore.Identity.IdentityUser
+
+<h2>Eliminar Usuario</h2>
+
+<p>¿Estás seguro de que deseas eliminar al usuario @Model.UserName?</p>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="@Url.Action("Index")" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>Bienvenido a la página principal.</p>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <a href="@Url.Action("Index", "Users")" class="btn btn-primary">Gestionar Usuarios</a>
+}
